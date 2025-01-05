@@ -1,21 +1,14 @@
-int ledpin =9;
-int analogPin = 0;
-int val=5;
-
 void setup() {
-
-pinMode(ledpin, OUTPUT);
+Serial.begin(9600);
 
 }
 
 void loop() {
+int raw = analogRead(A0);
+float voltage = raw * ( 5.0 / 1023.0 );
 
-analogWrite(ledpin ,analogPin);
-analogPin =analogPin +val;
-if (analogPin <= 0 || analogPin >= 255)
-{
-  val = -val;
-}
-delay(10);
+Serial.println("voltage:  ");
+Serial.println(voltage);
+delay(2000);
 
 }
