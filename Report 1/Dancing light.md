@@ -96,7 +96,7 @@ if (key == 1)
 } 
 
  ## شماتیک مدار:
-![توضیح تصویر](https://github.com/Rahel12384/Microprocessor-4/blob/main/Report%201/5.jpg)
+![توضیح تصویر](https://github.com/Rahel12384/Microprocessor-4/blob/main/Report%201/55.jpg)
 
 
 
