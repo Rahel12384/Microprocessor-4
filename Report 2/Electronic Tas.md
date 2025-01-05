@@ -20,45 +20,71 @@
   * 2 مقاومت ها را به سر مثبت (آند ، بلندتر) هر LED وصل میکنیم.
   * 3 سر دیگر مقاومت هارا را به پایه های شماره ۰ تا 6  بورد آردینو  وصل میکنیم.
   * 4 پایه منفی (کاتد ، کوتاه تر)  LED را به GND (زمین) بورد آردینو وصل میکنیم.
-* 5 یک push button را روی برد قرار میدهیم به طوریکه پایه ها روبروی هم باشند(عمودی)
-نکته: پایه های روبرو در push button به هم متصل هستند
-* 6  پایه سمت چپ بالای push button را به A0 در بورد آردینو وصل میکنیم
-* 7 پایه سمت راست بالای push button را به GND (زمین) وصل آردینو میکنیم
-* 8 پایه سمت چپ پایین push button را به مقاومت ۳ کیلواهم وصل میکنیم 
-* 9 مقاومت ۳ کیلو اهمی را به ۵ولت وصل میکنیم 
+  * 5 یک push button را روی برد قرار میدهیم به طوریکه پایه ها روبروی هم باشند(عمودی)
+  نکته: پایه های روبرو در push button به هم متصل هستند
+  * 6  پایه سمت چپ بالای push button را به A0 در بورد آردینو وصل میکنیم
+  * 7 پایه سمت راست بالای push button را به GND (زمین) وصل آردینو میکنیم
+  * 8 پایه سمت چپ پایین push button را به مقاومت ۳ کیلواهم وصل میکنیم 
+  * 9 مقاومت ۳ کیلو اهمی را به ۵ولت وصل میکنیم 
   * 10 بورد اردینو را توسط کابل  USB  به کامپیوتر وصل میکنیم.
 
  
   ## کد آزمایش :
 long randomnumber;
+
 const int but = A0;
+
 const int pinLed[] = {0, 1 , 2 , 3 , 4 , 5};
+
 
 #define key1 digitalRead(A0)
 
 void setup()
+
 {
+
   Serial.begin(9600);
+  
   randomSeed(analogRead(0));
+  
   pinMode(A0, INPUT);
+  
   pinMode(0, OUTPUT);
+  
   pinMode(1, OUTPUT);
+  
   pinMode(2, OUTPUT);
+  
   pinMode(3, OUTPUT);
+  
   pinMode(4, OUTPUT);
+  
   pinMode(5, OUTPUT);
+  
 }
 
+
 void loop()
+
 {
+
   int randnum = random(0 , 6);
+  
   if (key1 == LOW)
+  
   {
+  
     digitalWrite ( pinLed[randnum] , HIGH);
+    
     delay(2000);
+    
     digitalWrite ( pinLed[randnum] , LOW);
+    
     Serial.println(randnum + 1);
+  
   }
+
+
 }
 
 
