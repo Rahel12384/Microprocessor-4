@@ -67,7 +67,7 @@ analogWrite(ledpin , val/4);
 
 
 ## خروجی آزمایش:
-![alt text]()
+![alt text](https://github.com/Rahel12384/Microprocessor-4/blob/main/Report%203/VID_20250106_173715_651.gif)
 
   
 ## نتیجه گیری:
