@@ -58,7 +58,7 @@ delay(2000);
 
 
 ## خروجی آزمایش:
-![alt text]()
+![alt text](https://github.com/Rahel12384/Microprocessor-4/blob/main/Report%204/1736186096061.mp4)
 
   
 ## نتیجه گیری:
